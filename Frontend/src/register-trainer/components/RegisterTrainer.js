@@ -1,5 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { Container, Row, Col } from "reactstrap";
 import RegisterTrainerForm from "./RegisterTrainerForm";
 

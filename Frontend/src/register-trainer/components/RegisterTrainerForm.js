@@ -1,15 +1,12 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import { registerTrainer } from "../../actions";
 
 const RegisterTrainerForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState(null);
   const history = useHistory();
-  const dispatch = useDispatch();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -34,7 +31,6 @@ const RegisterTrainerForm = () => {
     } else {
       setError("");
       history.push("/pokemons");
-      dispatch(registerTrainer());
     }
   }
 

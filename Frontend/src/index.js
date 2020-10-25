@@ -7,12 +7,11 @@ import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import { applyMiddleware, combineReducers, createStore, compose } from "redux";
 import thunk from "redux-thunk";
-import { pokemonReducer, trainerReducer } from "./reducers";
+import { pokemonReducer } from "./reducers";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
-  pokemonReducer,
-  trainerReducer,
+  pokemonReducer
 });
 const store = createStore(
   rootReducer,
